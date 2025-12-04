@@ -1,0 +1,225 @@
+(3420, 400)
+(3420, 1)
+(3420, 400)
+(3420, 1)
+/Users/rmcsweeney/Documents/GitHub/PythonProject2/.venv2/lib/python3.13/site-packages/sklearn/linear_model/_logistic.py:473: ConvergenceWarning: lbfgs failed to converge after 1000 iteration(s) (status=1):
+STOP: TOTAL NO. OF ITERATIONS REACHED LIMIT
+
+Increase the number of iterations to improve the convergence (max_iter=1000).
+You might also want to scale the data as shown in:
+    https://scikit-learn.org/stable/modules/preprocessing.html
+Please also refer to the documentation for alternative solver options:
+    https://scikit-learn.org/stable/modules/linear_model.html#logistic-regression
+  n_iter_i = _check_optimize_result(
+
+print(logistic_y_frt[:5,:])
+print(svm_y_frt[:5,:])
+print(lda_y_frt[:5,:]) # prints rows 0-4 (the first 5)
+
+[-1 -1 -1 ... -1 -1 -1]
+[-1 -1 -1 ... -1 -1 -1]
+[-1 -1 -1 ... -1 -1 -1]
+[[9.92136031e-01 7.86396922e-03]
+ [9.91252833e-01 8.74716664e-03]
+ [9.99998292e-01 1.70787941e-06]
+ [9.89777577e-01 1.02224233e-02]
+ [9.99970079e-01 2.99207126e-05]]
+[[9.91180892e-01 8.81910758e-03]
+ [9.25844247e-01 7.41557534e-02]
+ [9.99035092e-01 9.64907541e-04]
+ [9.79185305e-01 2.08146953e-02]
+ [9.91461690e-01 8.53830994e-03]]
+[[9.94107264e-01 5.89273566e-03]
+ [9.71985102e-01 2.80148984e-02]
+ [9.99996949e-01 3.05095914e-06]
+ [9.34135967e-01 6.58640328e-02]
+ [9.99895951e-01 1.04048717e-04]]
+[[9.92136031e-01 7.86396922e-03]
+ [9.91252833e-01 8.74716664e-03]
+ [9.99998292e-01 1.70787941e-06]
+ [9.89777577e-01 1.02224233e-02]
+ [9.99970079e-01 2.99207126e-05]]
+[[9.91180892e-01 8.81910758e-03]
+ [9.25844247e-01 7.41557534e-02]
+ [9.99035092e-01 9.64907541e-04]
+ [9.79185305e-01 2.08146953e-02]
+ [9.91461690e-01 8.53830994e-03]]
+[[9.94107264e-01 5.89273566e-03]
+ [9.71985102e-01 2.80148984e-02]
+ [9.99996949e-01 3.05095914e-06]
+ [9.34135967e-01 6.58640328e-02]
+ [9.99895951e-01 1.04048717e-04]]
+
+print(logistic_letter_mat_trn)
+print(list(char_trn)) # This is the true spelling characters for training set!
+Logistic Regression on TRN:
+[['Z' 'T' 'T' 'T' 'T' 'T' 'T' 'T' 'T' 'T' 'T' 'T' 'T' 'T' 'T']
+ ['H' 'H' 'H' 'H' 'H' 'H' 'H' 'H' 'H' 'H' 'H' 'H' 'H' 'H' 'H']
+ ['E' 'E' 'E' 'E' 'E' 'E' 'E' 'E' 'E' 'E' 'E' 'E' 'E' 'E' 'E']
+ ['0' '0' '0' '0' '0' '0' '0' '0' '0' '0' '0' '0' '0' '0' '0']
+ ['Q' 'Q' 'Q' 'Q' 'Q' 'Q' 'Q' 'Q' 'Q' 'Q' 'Q' 'Q' 'Q' 'Q' 'Q']
+ ['U' 'U' 'U' 'U' 'U' 'U' 'U' 'U' 'U' 'U' 'U' 'U' 'U' 'U' 'U']
+ ['C' 'I' 'I' 'I' 'I' 'I' 'I' 'I' 'I' 'I' 'I' 'I' 'I' 'I' 'I']
+ ['C' 'C' 'C' 'C' 'C' 'C' 'C' 'C' 'C' 'C' 'C' 'C' 'C' 'C' 'C']
+ ['K' 'K' 'K' 'K' 'K' 'K' 'K' 'K' 'K' 'K' 'K' 'K' 'K' 'K' 'K']
+ ['0' '0' '0' '0' '0' '0' '0' '0' '0' '0' '0' '0' '0' '0' '0']
+ ['B' 'B' 'B' 'B' 'B' 'B' 'B' 'B' 'B' 'B' 'B' 'B' 'B' 'B' 'B']
+ ['R' 'R' 'R' 'R' 'R' 'R' 'R' 'R' 'R' 'R' 'R' 'R' 'R' 'R' 'R']
+ ['O' 'O' 'O' 'O' 'O' 'O' 'O' 'O' 'O' 'O' 'O' 'O' 'O' 'O' 'O']
+ ['W' 'W' 'W' 'W' 'W' 'W' 'W' 'W' 'W' 'W' 'W' 'W' 'W' 'W' 'W']
+ ['N' 'N' 'N' 'N' 'N' 'N' 'N' 'N' 'N' 'N' 'N' 'N' 'N' 'N' 'N']
+ ['4' '0' '0' '0' '0' '0' '0' '0' '0' '0' '0' '0' '0' '0' '0']
+ ['F' 'F' 'F' 'F' 'F' 'F' 'F' 'F' 'F' 'F' 'F' 'F' 'F' 'F' 'F']
+ ['O' 'O' 'O' 'O' 'O' 'O' 'O' 'O' 'O' 'O' 'O' 'O' 'O' 'O' 'O']
+ ['X' 'X' 'X' 'X' 'X' 'X' 'X' 'X' 'X' 'X' 'X' 'X' 'X' 'X' 'X']]
+['T', 'H', 'E', '0', 'Q', 'U', 'I', 'C', 'K', '0', 'B', 'R', 'O', 'W', 'N', '0', 'F', 'O', 'X']
+
+print(logistic_letter_mat_frt)
+print(list(char_frt)) # This is the true spelling characters for testing set!
+Logistic Regression on FRT:
+[['Z' 'T' 'T' 'T' 'T' 'T' 'T' 'T' 'T' 'T' 'T' 'T' 'T' 'T' 'T']
+ ['H' 'H' 'H' 'H' 'H' 'H' 'H' 'H' 'H' 'H' 'H' 'H' 'H' 'H' 'H']
+ ['E' 'E' 'E' 'E' 'E' 'E' 'E' 'E' 'E' 'E' 'E' 'E' 'E' 'E' 'E']
+ ['0' '0' '0' '0' '0' '0' '0' '0' '0' '0' '0' '0' '0' '0' '0']
+ ['Q' 'Q' 'Q' 'Q' 'Q' 'Q' 'Q' 'Q' 'Q' 'Q' 'Q' 'Q' 'Q' 'Q' 'Q']
+ ['U' 'U' 'U' 'U' 'U' 'U' 'U' 'U' 'U' 'U' 'U' 'U' 'U' 'U' 'U']
+ ['C' 'I' 'I' 'I' 'I' 'I' 'I' 'I' 'I' 'I' 'I' 'I' 'I' 'I' 'I']
+ ['C' 'C' 'C' 'C' 'C' 'C' 'C' 'C' 'C' 'C' 'C' 'C' 'C' 'C' 'C']
+ ['K' 'K' 'K' 'K' 'K' 'K' 'K' 'K' 'K' 'K' 'K' 'K' 'K' 'K' 'K']
+ ['0' '0' '0' '0' '0' '0' '0' '0' '0' '0' '0' '0' '0' '0' '0']
+ ['B' 'B' 'B' 'B' 'B' 'B' 'B' 'B' 'B' 'B' 'B' 'B' 'B' 'B' 'B']
+ ['R' 'R' 'R' 'R' 'R' 'R' 'R' 'R' 'R' 'R' 'R' 'R' 'R' 'R' 'R']
+ ['O' 'O' 'O' 'O' 'O' 'O' 'O' 'O' 'O' 'O' 'O' 'O' 'O' 'O' 'O']
+ ['W' 'W' 'W' 'W' 'W' 'W' 'W' 'W' 'W' 'W' 'W' 'W' 'W' 'W' 'W']
+ ['N' 'N' 'N' 'N' 'N' 'N' 'N' 'N' 'N' 'N' 'N' 'N' 'N' 'N' 'N']
+ ['4' '0' '0' '0' '0' '0' '0' '0' '0' '0' '0' '0' '0' '0' '0']
+ ['F' 'F' 'F' 'F' 'F' 'F' 'F' 'F' 'F' 'F' 'F' 'F' 'F' 'F' 'F']
+ ['O' 'O' 'O' 'O' 'O' 'O' 'O' 'O' 'O' 'O' 'O' 'O' 'O' 'O' 'O']
+ ['X' 'X' 'X' 'X' 'X' 'X' 'X' 'X' 'X' 'X' 'X' 'X' 'X' 'X' 'X']]
+['T', 'H', 'E', '0', 'Q', 'U', 'I', 'C', 'K', '0', 'B', 'R', 'O', 'W', 'N', '0', 'F', 'O', 'X']
+
+print(lda_letter_mat_trn)
+print(list(char_trn)) # This is the true spelling characters for training set!
+LDA on TRN:
+[['Z' 'Z' 'T' 'T' 'T' 'T' 'T' 'T' 'T' 'T' 'T' 'T' 'T' 'T' 'T']
+ ['H' 'H' 'H' 'H' 'H' 'H' 'H' 'H' 'H' 'H' 'H' 'H' 'H' 'H' 'H']
+ ['E' 'E' 'E' 'E' 'E' 'E' 'E' 'E' 'E' 'E' 'E' 'E' 'E' 'E' 'E']
+ ['0' '0' '0' '0' '0' '0' '0' '0' '0' '0' '0' '0' '0' '0' '0']
+ ['Q' 'Q' 'Q' 'Q' 'Q' 'Q' 'Q' 'Q' 'Q' 'Q' 'Q' 'Q' 'Q' 'Q' 'Q']
+ ['U' 'U' 'U' 'U' 'U' 'U' 'U' 'U' 'U' 'U' 'U' 'U' 'U' 'U' 'U']
+ ['C' 'I' 'I' 'I' 'I' 'I' 'I' 'I' 'I' 'I' 'I' 'I' 'I' 'I' 'I']
+ ['C' 'C' 'C' 'C' 'C' 'C' 'C' 'C' 'C' 'C' 'C' 'C' 'C' 'C' 'C']
+ ['K' 'K' 'K' 'K' 'K' 'K' 'K' 'K' 'K' 'K' 'K' 'K' 'K' 'K' 'K']
+ ['0' '0' '0' '0' '0' '0' '0' '0' '0' '0' '0' '0' '0' '0' '0']
+ ['B' 'B' 'B' 'B' 'B' 'B' 'B' 'B' 'B' 'B' 'B' 'B' 'B' 'B' 'B']
+ ['R' 'R' 'R' 'R' 'R' 'R' 'R' 'R' 'R' 'R' 'R' 'R' 'R' 'R' 'R']
+ ['O' 'O' 'O' 'O' 'O' 'O' 'O' 'O' 'O' 'O' 'O' 'O' 'O' 'O' 'O']
+ ['W' 'W' 'W' 'W' 'W' 'W' 'W' 'W' 'W' 'W' 'W' 'W' 'W' 'W' 'W']
+ ['H' 'N' 'N' 'N' 'N' 'N' 'N' 'N' 'N' 'N' 'N' 'N' 'N' 'N' 'N']
+ ['4' '0' '0' '0' '0' '0' '0' '0' '0' '0' '0' '0' '0' '0' '0']
+ ['F' 'F' 'F' 'F' 'F' 'F' 'F' 'F' 'F' 'F' 'F' 'F' 'F' 'F' 'F']
+ ['O' 'O' 'O' 'O' 'O' 'O' 'O' 'O' 'O' 'O' 'O' 'O' 'O' 'O' 'O']
+ ['X' 'X' 'X' 'X' 'X' 'X' 'X' 'X' 'X' 'X' 'X' 'X' 'X' 'X' 'X']]
+['T', 'H', 'E', '0', 'Q', 'U', 'I', 'C', 'K', '0', 'B', 'R', 'O', 'W', 'N', '0', 'F', 'O', 'X']
+
+print(lda_letter_mat_frt)
+print(list(char_frt)) # This is the true spelling characters for testing set!
+LDA on FRT:
+[['Z' 'Z' 'T' 'T' 'T' 'T' 'T' 'T' 'T' 'T' 'T' 'T' 'T' 'T' 'T']
+ ['H' 'H' 'H' 'H' 'H' 'H' 'H' 'H' 'H' 'H' 'H' 'H' 'H' 'H' 'H']
+ ['E' 'E' 'E' 'E' 'E' 'E' 'E' 'E' 'E' 'E' 'E' 'E' 'E' 'E' 'E']
+ ['0' '0' '0' '0' '0' '0' '0' '0' '0' '0' '0' '0' '0' '0' '0']
+ ['Q' 'Q' 'Q' 'Q' 'Q' 'Q' 'Q' 'Q' 'Q' 'Q' 'Q' 'Q' 'Q' 'Q' 'Q']
+ ['U' 'U' 'U' 'U' 'U' 'U' 'U' 'U' 'U' 'U' 'U' 'U' 'U' 'U' 'U']
+ ['C' 'I' 'I' 'I' 'I' 'I' 'I' 'I' 'I' 'I' 'I' 'I' 'I' 'I' 'I']
+ ['C' 'C' 'C' 'C' 'C' 'C' 'C' 'C' 'C' 'C' 'C' 'C' 'C' 'C' 'C']
+ ['K' 'K' 'K' 'K' 'K' 'K' 'K' 'K' 'K' 'K' 'K' 'K' 'K' 'K' 'K']
+ ['0' '0' '0' '0' '0' '0' '0' '0' '0' '0' '0' '0' '0' '0' '0']
+ ['B' 'B' 'B' 'B' 'B' 'B' 'B' 'B' 'B' 'B' 'B' 'B' 'B' 'B' 'B']
+ ['R' 'R' 'R' 'R' 'R' 'R' 'R' 'R' 'R' 'R' 'R' 'R' 'R' 'R' 'R']
+ ['O' 'O' 'O' 'O' 'O' 'O' 'O' 'O' 'O' 'O' 'O' 'O' 'O' 'O' 'O']
+ ['W' 'W' 'W' 'W' 'W' 'W' 'W' 'W' 'W' 'W' 'W' 'W' 'W' 'W' 'W']
+ ['H' 'N' 'N' 'N' 'N' 'N' 'N' 'N' 'N' 'N' 'N' 'N' 'N' 'N' 'N']
+ ['4' '0' '0' '0' '0' '0' '0' '0' '0' '0' '0' '0' '0' '0' '0']
+ ['F' 'F' 'F' 'F' 'F' 'F' 'F' 'F' 'F' 'F' 'F' 'F' 'F' 'F' 'F']
+ ['O' 'O' 'O' 'O' 'O' 'O' 'O' 'O' 'O' 'O' 'O' 'O' 'O' 'O' 'O']
+ ['X' 'X' 'X' 'X' 'X' 'X' 'X' 'X' 'X' 'X' 'X' 'X' 'X' 'X' 'X']]
+['T', 'H', 'E', '0', 'Q', 'U', 'I', 'C', 'K', '0', 'B', 'R', 'O', 'W', 'N', '0', 'F', 'O', 'X']
+
+print(svm_letter_mat_trn)
+Support Vector Machine on TRN:
+[['Z' 'T' 'T' 'T' 'T' 'T' 'T' 'T' 'T' 'T' 'T' 'T' 'T' 'T' 'T']
+ ['H' 'H' 'H' 'H' 'H' 'H' 'H' 'H' 'H' 'H' 'H' 'H' 'H' 'H' 'H']
+ ['E' 'E' 'E' 'E' 'E' 'E' 'E' 'E' 'E' 'E' 'E' 'E' 'E' 'E' 'E']
+ ['0' '0' '0' '0' '0' '0' '0' '0' '0' '0' '0' '0' '0' '0' '0']
+ ['Q' 'Q' 'Q' 'Q' 'Q' 'Q' 'Q' 'Q' 'Q' 'Q' 'Q' 'Q' 'Q' 'Q' 'Q']
+ ['U' 'U' 'U' 'U' 'U' 'U' 'U' 'U' 'U' 'U' 'U' 'U' 'U' 'U' 'U']
+ ['I' 'I' 'I' 'I' 'I' 'I' 'I' 'I' 'I' 'I' 'I' 'I' 'I' 'I' 'I']
+ ['C' 'C' 'C' 'C' 'C' 'C' 'C' 'C' 'C' 'C' 'C' 'C' 'C' 'C' 'C']
+ ['K' 'K' 'K' 'K' 'K' 'K' 'K' 'K' 'K' 'K' 'K' 'K' 'K' 'K' 'K']
+ ['0' '0' '0' '0' '0' '0' '0' '0' '0' '0' '0' '0' '0' '0' '0']
+ ['B' 'B' 'B' 'B' 'B' 'B' 'B' 'B' 'B' 'B' 'B' 'B' 'B' 'B' 'B']
+ ['R' 'R' 'R' 'R' 'R' 'R' 'R' 'R' 'R' 'R' 'R' 'R' 'R' 'R' 'R']
+ ['O' 'O' 'O' 'O' 'O' 'O' 'O' 'O' 'O' 'O' 'O' 'O' 'O' 'O' 'O']
+ ['W' 'W' 'W' 'W' 'W' 'W' 'W' 'W' 'W' 'W' 'W' 'W' 'W' 'W' 'W']
+ ['N' 'N' 'N' 'N' 'N' 'N' 'N' 'N' 'N' 'N' 'N' 'N' 'N' 'N' 'N']
+ ['0' '0' '0' '0' '0' '0' '0' '0' '0' '0' '0' '0' '0' '0' '0']
+ ['F' 'F' 'F' 'F' 'F' 'F' 'F' 'F' 'F' 'F' 'F' 'F' 'F' 'F' 'F']
+ ['O' 'O' 'O' 'O' 'O' 'O' 'O' 'O' 'O' 'O' 'O' 'O' 'O' 'O' 'O']
+ ['X' 'X' 'X' 'X' 'X' 'X' 'X' 'X' 'X' 'X' 'X' 'X' 'X' 'X' 'X']]
+print(list(char_trn)) # This is the true spelling characters for training set!
+['T', 'H', 'E', '0', 'Q', 'U', 'I', 'C', 'K', '0', 'B', 'R', 'O', 'W', 'N', '0', 'F', 'O', 'X']
+
+
+print(svm_letter_mat_frt)
+
+Support Vector Machine on FRT:
+[['Z' 'T' 'T' 'T' 'T' 'T' 'T' 'T' 'T' 'T' 'T' 'T' 'T' 'T' 'T']
+ ['H' 'H' 'H' 'H' 'H' 'H' 'H' 'H' 'H' 'H' 'H' 'H' 'H' 'H' 'H']
+ ['E' 'E' 'E' 'E' 'E' 'E' 'E' 'E' 'E' 'E' 'E' 'E' 'E' 'E' 'E']
+ ['0' '0' '0' '0' '0' '0' '0' '0' '0' '0' '0' '0' '0' '0' '0']
+ ['Q' 'Q' 'Q' 'Q' 'Q' 'Q' 'Q' 'Q' 'Q' 'Q' 'Q' 'Q' 'Q' 'Q' 'Q']
+ ['U' 'U' 'U' 'U' 'U' 'U' 'U' 'U' 'U' 'U' 'U' 'U' 'U' 'U' 'U']
+ ['I' 'I' 'I' 'I' 'I' 'I' 'I' 'I' 'I' 'I' 'I' 'I' 'I' 'I' 'I']
+ ['C' 'C' 'C' 'C' 'C' 'C' 'C' 'C' 'C' 'C' 'C' 'C' 'C' 'C' 'C']
+ ['K' 'K' 'K' 'K' 'K' 'K' 'K' 'K' 'K' 'K' 'K' 'K' 'K' 'K' 'K']
+ ['0' '0' '0' '0' '0' '0' '0' '0' '0' '0' '0' '0' '0' '0' '0']
+ ['B' 'B' 'B' 'B' 'B' 'B' 'B' 'B' 'B' 'B' 'B' 'B' 'B' 'B' 'B']
+ ['R' 'R' 'R' 'R' 'R' 'R' 'R' 'R' 'R' 'R' 'R' 'R' 'R' 'R' 'R']
+ ['O' 'O' 'O' 'O' 'O' 'O' 'O' 'O' 'O' 'O' 'O' 'O' 'O' 'O' 'O']
+ ['W' 'W' 'W' 'W' 'W' 'W' 'W' 'W' 'W' 'W' 'W' 'W' 'W' 'W' 'W']
+ ['N' 'N' 'N' 'N' 'N' 'N' 'N' 'N' 'N' 'N' 'N' 'N' 'N' 'N' 'N']
+ ['0' '0' '0' '0' '0' '0' '0' '0' '0' '0' '0' '0' '0' '0' '0']
+ ['F' 'F' 'F' 'F' 'F' 'F' 'F' 'F' 'F' 'F' 'F' 'F' 'F' 'F' 'F']
+ ['O' 'O' 'O' 'O' 'O' 'O' 'O' 'O' 'O' 'O' 'O' 'O' 'O' 'O' 'O']
+ ['X' 'X' 'X' 'X' 'X' 'X' 'X' 'X' 'X' 'X' 'X' 'X' 'X' 'X' 'X']]
+print(list(char_frt)) # This is the true spelling characters for training set!
+['T', 'H', 'E', '0', 'Q', 'U', 'I', 'C', 'K', '0', 'B', 'R', 'O', 'W', 'N', '0', 'F', 'O', 'X']
+
+print(logistic_trn_accuracy)
+print(lda_trn_accuracy)
+print(svm_trn_accuracy)
+
+print(logistic_frt_accuracy)
+print(lda_frt_accuracy)
+print(svm_frt_accuracy)
+
+
+[0.84210526 1.         1.         1.         1.         1.
+ 1.         1.         1.         1.         1.         1.
+ 1.         1.         1.        ]
+[0.78947368 0.94736842 1.         1.         1.         1.
+ 1.         1.         1.         1.         1.         1.
+ 1.         1.         1.        ]
+[0.94736842 1.         1.         1.         1.         1.
+ 1.         1.         1.         1.         1.         1.
+ 1.         1.         1.        ]
+[0.84210526 1.         1.         1.         1.         1.
+ 1.         1.         1.         1.         1.         1.
+ 1.         1.         1.        ]
+[0.78947368 0.94736842 1.         1.         1.         1.
+ 1.         1.         1.         1.         1.         1.
+ 1.         1.         1.        ]
+[0.94736842 1.         1.         1.         1.         1.
+ 1.         1.         1.         1.         1.         1.
+ 1.         1.         1.        ]
